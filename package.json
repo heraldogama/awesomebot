@@ -6,7 +6,9 @@
   "author": "Heraldo Gama <heraldogama@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js --config ./ormconfig.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/bot.ts --ignore-watch node-modules",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js --config ./ormconfig.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
