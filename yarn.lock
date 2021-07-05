@@ -738,10 +738,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-telegraf@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.4.0.tgz#a84228664a252062036b328fc364b5662ba3d22d"
-  integrity sha512-DjVVEz37/5Hp0n8eLhAVjErwoyrWsqLyFAoRj8sU5XiD2CVAbBOx9J6a7cLn/B46pPgDqgbrdjiOeK0fQMiLOA==
+telegraf@4.3:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.3.0.tgz#c9683192bdb81e7c7fbb04cf1ce750fb34de7149"
+  integrity sha512-MuDUtSMipzMzQp8fXbQx76jp4ZD70KREdnpH1idUzN9Zlgm6EzatBQFU4Ps0ipxtEmnBBdghBMumQwrjRe3eqg==
   dependencies:
     abort-controller "^3.0.0"
     debug "^4.3.1"
@@ -751,7 +751,7 @@ telegraf@^4.4.0:
     p-timeout "^4.1.0"
     safe-compare "^1.1.4"
     sandwich-stream "^2.0.2"
-    typegram "^3.4.0"
+    typegram "^3.2.0"
 
 thenify-all@^1.0.0:
   version "1.6.0"
@@ -822,7 +822,7 @@ tslib@^2.1.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
   integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
 
-typegram@^3.4.0:
+typegram@^3.2.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.4.0.tgz#ab3a7b4219d9d7d7210eb2e39759a242927e8035"
   integrity sha512-GUE1LV3LJruTThJaUBUvTnaEpTswFhuxhEx9LaVLIA6WRw9CdPQmb87OIA0rCvoMSPBC8gZiHrrPqX9VJGDXwQ==
