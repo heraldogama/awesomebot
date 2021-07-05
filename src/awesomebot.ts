@@ -6,22 +6,22 @@ import Awesome from "./entity/Awesome";
 import { getRepository } from "typeorm";
 
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
-// bot.start(async (ctx) => {
-//   const awesomeRepository = getRepository(Awesome);
-//   const chat_id = ctx.from.id;
-//   const checkIfExists = await awesomeRepository.findOne({ where: { chat_id } });
-//   if (!checkIfExists) {
-//     ctx.reply(`Seja bem vindo ${ctx.from.first_name}! Me informe seu e-mail.`);
-//   } else {
-//     ctx.reply(`${ctx.from.first_name}, já temos o seu cadastro aqui.`);
-//   }
-// });
-
-bot.start((ctx) => {
-  ctx.reply(`${ctx.from.first_name}, Seja bem vindo!`);
+bot.start(async (ctx) => {
+  const awesomeRepository = getRepository(Awesome);
+  const chat_id = ctx.from.id;
+  const checkIfExists = await awesomeRepository.findOne({ where: { chat_id } });
+  if (!checkIfExists) {
+    ctx.reply(`Seja bem vindo ${ctx.from.first_name}! Me informe seu e-mail.`);
+  } else {
+    ctx.reply(`${ctx.from.first_name}, já temos o seu cadastro aqui.`);
+  }
 });
 
-bot.command("ajuda", (ctx) => ctx.reply("Em que posso te ajudar?"));
+// bot.start((ctx) => {
+//   ctx.reply(`${ctx.from.first_name}, Seja bem vindo!`);
+// });
+
+// bot.command("ajuda", (ctx) => ctx.reply("Em que posso te ajudar?"));
 
 bot.on("text", async (ctx) => {
   const awesomeRepository = getRepository(Awesome);
