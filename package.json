@@ -6,9 +6,9 @@
   "author": "Heraldo Gama <heraldogama@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/awesomebot.ts --ignore-watch node-modules",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js --config ./ormconfig.ts",
-    "build": "tsc"
+    "dev": "NODE_ENV=developer ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/awesomebot.ts --ignore-watch node-modules",
+    "typeorm": "NODE_ENV=developer ts-node-dev ./node_modules/typeorm/cli.js --config ./ormconfig.ts",
+    "build": "NODE_ENV=production tsc --target ES5 --experimentalDecorators --emitDecoratorMetadata"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",

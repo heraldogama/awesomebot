@@ -7,6 +7,7 @@ import { getRepository } from "typeorm";
 
 const bot = new Telegraf(process.env.BOT_TOKEN as string);
 bot.start(async (ctx) => {
+  console.log(process.env.TYPEORM_CONNECTION);
   const awesomeRepository = getRepository(Awesome);
   const chat_id = ctx.from.id;
   const checkIfExists = await awesomeRepository.findOne({ where: { chat_id } });
@@ -17,11 +18,7 @@ bot.start(async (ctx) => {
   }
 });
 
-// bot.start((ctx) => {
-//   ctx.reply(`${ctx.from.first_name}, Seja bem vindo!`);
-// });
-
-// bot.command("ajuda", (ctx) => ctx.reply("Em que posso te ajudar?"));
+bot.command("ajuda", (ctx) => ctx.reply("Em que posso te ajudar?"));
 
 bot.on("text", async (ctx) => {
   const awesomeRepository = getRepository(Awesome);
