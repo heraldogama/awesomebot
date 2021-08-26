@@ -3,3 +3,4 @@
 .env
 .env.dev
 /src/bot.ts
+oldconfig.js
